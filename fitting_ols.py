@@ -19,7 +19,7 @@ def compute_r_line(xes, yes):
     r,_ = pearsonr(xes, yes)
     
     # slope
-    m = r*sd_x/sd_y
+    m = r*sd_y/sd_x
     
     # y-intercept
     b = yes[0]-m*xes[0]
