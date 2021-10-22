@@ -16,7 +16,7 @@ def compute_r_line(xes, yes):
     sd_y = np.std(yes)
     
     # correlation r
-    r = np.mean(standard_units(xes)*standard_units(yes))
+    r,_ = np.mean(standard_units(xes)*standard_units(yes))
     
     # slope
     m = r*sd_x/sd_y
