@@ -1,7 +1,7 @@
 """
 Name: Iris Shakya
 Email: iris.shakya27@myhunter.cuny.edu
-Resources: python scipy docs, inferentialthinking.com/chapters/15/2/Regression_Line.html
+Resources: python scipy docs, machine learning mastery
 """
 
 import numpy as np
@@ -16,7 +16,7 @@ def compute_r_line(xes, yes):
     sd_y = np.std(yes)
     
     # correlation r
-    r,_ = np.mean(standard_units(xes)*standard_units(yes))
+    r,_ = pearsonr(xes, yes)
     
     # slope
     m = r*sd_x/sd_y
